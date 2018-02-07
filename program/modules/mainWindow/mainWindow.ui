@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>mainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTableWidget" name="currentRepositoryTable">
+      <column>
+       <property name="text">
+        <string>Nr wypożyczenia</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Pesel</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Id pojazdu</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Aktualna cena</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Cena wynajęcia</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Data oddania</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuKlienci">
+    <property name="title">
+     <string>Klienci</string>
+    </property>
+    <addaction name="actionAddClient"/>
+    <addaction name="actionShowClients"/>
+    <addaction name="actionSaveClients"/>
+    <addaction name="actionLoadClients"/>
+   </widget>
+   <widget class="QMenu" name="menuWypo_yczenia">
+    <property name="title">
+     <string>Wypożyczenia</string>
+    </property>
+    <addaction name="actionAddRent"/>
+    <addaction name="actionShowArchivedRents"/>
+   </widget>
+   <widget class="QMenu" name="menuPojazdy">
+    <property name="title">
+     <string>Pojazdy</string>
+    </property>
+    <addaction name="actionAddCar"/>
+    <addaction name="actionAddMope"/>
+    <addaction name="actionAddBicycle"/>
+    <addaction name="actionVehicles"/>
+    <addaction name="actionSaveVehicles"/>
+    <addaction name="actionLoadVehicles"/>
+   </widget>
+   <addaction name="menuKlienci"/>
+   <addaction name="menuWypo_yczenia"/>
+   <addaction name="menuPojazdy"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAddClient">
+   <property name="text">
+    <string>Dodaj klienta</string>
+   </property>
+   <property name="toolTip">
+    <string>Dodaj klienta</string>
+   </property>
+   <property name="whatsThis">
+    <string/>
+   </property>
+  </action>
+  <action name="actionUsu_klienta">
+   <property name="text">
+    <string>Usuń klienta</string>
+   </property>
+  </action>
+  <action name="actionShowClients">
+   <property name="text">
+    <string>Wyświetl klientów</string>
+   </property>
+  </action>
+  <action name="actionAddRent">
+   <property name="text">
+    <string>Dodaj wypożyczenie</string>
+   </property>
+  </action>
+  <action name="actionUsu_wypo_yczenie">
+   <property name="text">
+    <string>Usuń wypożyczenie</string>
+   </property>
+  </action>
+  <action name="actionAddCar">
+   <property name="text">
+    <string>Dodaj samochód</string>
+   </property>
+  </action>
+  <action name="actionVehicles">
+   <property name="text">
+    <string>Wyświetl pojazdy</string>
+   </property>
+  </action>
+  <action name="actionShowCurrentRents">
+   <property name="text">
+    <string>Wyświetl obecne wypożyczenia</string>
+   </property>
+  </action>
+  <action name="actionShowArchivedRents">
+   <property name="text">
+    <string>Wyświetl archiwalne wypożyczenia</string>
+   </property>
+  </action>
+  <action name="actionAddMope">
+   <property name="text">
+    <string>Dodaj motocykl</string>
+   </property>
+  </action>
+  <action name="actionAddBicycle">
+   <property name="text">
+    <string>Dodaj rower</string>
+   </property>
+  </action>
+  <action name="actionSaveClients">
+   <property name="text">
+    <string>Zapisz</string>
+   </property>
+  </action>
+  <action name="actionLoadClients">
+   <property name="text">
+    <string>Wczytaj</string>
+   </property>
+  </action>
+  <action name="actionSaveVehicles">
+   <property name="text">
+    <string>Zapisz</string>
+   </property>
+  </action>
+  <action name="actionLoadVehicles">
+   <property name="text">
+    <string>Wczytaj</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionShowClients</sender>
+   <signal>triggered()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>showClients()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAddClient</sender>
+   <signal>triggered()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>addClient()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAddRent</sender>
+   <signal>triggered()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>addRent()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAddCar</sender>
+   <signal>triggered()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>addCar()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionVehicles</sender>
+   <signal>triggered()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>showVehicles()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionShowArchivedRents</sender>
+   <signal>triggered()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>showArchivedRents()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionShowCurrentRents</sender>
+   <signal>triggered()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>showCurrentRents()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAddBicycle</sender>
+   <signal>triggered()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>addBicycle()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAddMope</sender>
+   <signal>triggered()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>addMope()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSaveClients</sender>
+   <signal>triggered()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>saveClients()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionLoadClients</sender>
+   <signal>triggered()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>loadClients()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSaveVehicles</sender>
+   <signal>triggered()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>saveVehicles()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionLoadVehicles</sender>
+   <signal>triggered()</signal>
+   <receiver>mainWindow</receiver>
+   <slot>loadVehicles()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>showClients()</slot>
+  <slot>addClient()</slot>
+  <slot>addRent()</slot>
+  <slot>addCar()</slot>
+  <slot>showVehicles()</slot>
+  <slot>showCurrentRents()</slot>
+  <slot>showArchivedRents()</slot>
+  <slot>addBicycle()</slot>
+  <slot>addMope()</slot>
+  <slot>saveClients()</slot>
+  <slot>loadClients()</slot>
+  <slot>saveVehicles()</slot>
+  <slot>loadVehicles()</slot>
+ </slots>
+</ui>
